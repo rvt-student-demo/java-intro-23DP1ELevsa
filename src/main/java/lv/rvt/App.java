@@ -3,30 +3,21 @@ package lv.rvt;
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 
+import javax.sound.midi.SysexMessage;
+
 public class App 
 {
     public static void main( String[] args )
     {
-        long lastId = -1;
-        try (BufferedReader reader = Utils.getReader("data.csv")) {
-            String line;
-            while ((line = reader.readLine()) != null) {
-                System.out.println(line);
-            }
+        // My code starts here
 
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+        String name = "Eduards";
+        int age = 16;
+        boolean isOnline = false;
 
-        try (BufferedWriter writter = Utils.getWriter("data.csv")) {
-            // writter.newLine();
-            // writter.write("2, user, 123");
-            // writter.flush();
-        
-        } catch (Exception e) {
-            // TODO: handle exception
-        }
+        System.out.println(age);
 
+        // Code ends
     }
 
 }
