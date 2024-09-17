@@ -8,10 +8,18 @@ public class App
     {
        Scanner scanner = new Scanner(System.in);
 
-       System.out.println("Give speed:");
-       int speed = Integer.valueOf(scanner.nextLine());
-       if (speed > 120) {
-        System.out.println("Speeding ticket!");
+       System.out.println("Give the first number:");
+       int firstNumber = Integer.valueOf(scanner.nextLine());
+
+       System.out.println("Give the second number:");
+       int secondNumber = Integer.valueOf(scanner.nextLine());
+
+       if (firstNumber > secondNumber) {
+        System.out.println("Greater number is: " + firstNumber);
+       } else if (firstNumber < secondNumber) {
+        System.out.println("Greater number is: " + secondNumber);
+       } else {
+        System.out.println("The numbers are equal!");
        }
     }
 }
