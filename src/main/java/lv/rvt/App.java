@@ -6,23 +6,22 @@ public class App
 {
     public static void main( String[] args )
     {
-       Scanner scanner = new Scanner(System.in);
+        Scanner scanner = new Scanner(System.in);
+        int sum = 0;
+        int amountOfNumbers = 0;
 
-       System.out.println("Value of the gift?");
-       int valueOfTheGift = Integer.valueOf(scanner.nextLine());
+        while (true) {
+            System.out.println("Give a number:");
+            int number = Integer.valueOf(scanner.nextLine());
 
-       if (valueOfTheGift < 5000) {
-        System.out.println("No tax!");
-       } else if (valueOfTheGift < 25000) {
-        System.out.println("Tax: " + (100 + (valueOfTheGift-5000) * 0.08));
-       } else if (valueOfTheGift < 55000) {
-        System.out.println("Tax: " + (1700 + (valueOfTheGift-25000) * 0.1));
-       } else if (valueOfTheGift < 200000) {
-        System.out.println("Tax: " + (4700 + (valueOfTheGift-55000) * 0.12));
-       } else if (valueOfTheGift < 1000000) {
-        System.out.println("Tax: " + (22100 + (valueOfTheGift-200000) * 0.15));
-       } else {
-        System.out.println("Tax: " + (142100 + (valueOfTheGift-1000000) * 0.17));
-       }
+            if (number == 0) {
+                break;
+            } else {
+                amountOfNumbers += 1;
+                sum += number;
+        }
     }
+    System.out.println("Number of numbers: " + amountOfNumbers);
+    System.out.println("Sum of the numbers: " + sum);
+}
 }
