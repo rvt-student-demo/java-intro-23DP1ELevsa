@@ -5,13 +5,15 @@ import java.util.Scanner;
 public class App 
 {
     public static void main( String[] args ) {
-        printUntilNumber(5);
+        divisibleByThreeInRange(2, 10);
     }
 
-    public static void printUntilNumber(int number) {
-        while (number >= 1) {
-            System.out.println(number);
-            number--;
+    public static void divisibleByThreeInRange(int beginning, int end) {
+        while (beginning <= end) {
+            if (beginning % 3 == 0) {
+                System.out.println(beginning);
+            }
+            beginning++;
         }
     }
 }
