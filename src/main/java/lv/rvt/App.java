@@ -4,18 +4,16 @@ import java.util.Scanner;
 
 public class App 
 {
-    public static void printStars(int number) {
-        int num = 0;
-        while (num < number) {
-            System.out.print("*");
-            num++;
+    public static void printSquare(int size) {
+        for (int a = 0; a < size; a++) {
+            for(int b = 0; b < size; b++ ) {
+                System.out.print("*");
+            }
+            System.out.println();
         }
-        System.out.println();
     }
     
     public static void main(String[] args) {
-        printStars(5);
-        printStars(3);
-        printStars(9);
+        printSquare(4);
     }
 }
