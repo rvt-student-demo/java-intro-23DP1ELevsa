@@ -5,33 +5,26 @@ import java.util.*;
 public class App 
 {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
+        ArrayList<Integer> numbers = new ArrayList<>();
+        numbers.add(3);
+        numbers.add(2);
+        numbers.add(6);
+        numbers.add(-1);
+        numbers.add(5);
+        numbers.add(1);
 
-        ArrayList<Integer> numberList = new ArrayList<>();
-        
-        numberList.add(Integer.valueOf(scanner.nextLine()));
+        System.out.println("The numbers in the range [0, 5]");
+        printNumbersInRange(numbers, 0, 5);
 
-        while (numberList.get(numberList.size() - 1) != -1) {
-            numberList.add(Integer.valueOf(scanner.nextLine()));
-        } 
-        
-        System.out.print("From where? ");
-        int from = Integer.valueOf(scanner.nextLine());
-
-        while (numberList.size() - 1 < from || from < 0) {
-            from = Integer.valueOf(scanner.nextLine());
+        System.out.println("The numbers in the range [3, 10]");
+        printNumbersInRange(numbers, 3, 10);
+    }
+    
+    public static void printNumbersInRange(ArrayList<Integer> numbers, int lowerLimit, int upperLimit) {
+        for (int number: numbers) {
+            if (lowerLimit <= number && number <= upperLimit) {
+                System.out.println(number);
+            }
         }
-
-        System.out.print("To where? ");
-        int to = Integer.valueOf(scanner.nextLine());
-
-        while (numberList.size() - 1 < to || to < 0) {
-            to = Integer.valueOf(scanner.nextLine());
-        }
-
-        while (from <= to) {
-            System.out.println(numberList.get(from));
-            from ++;
-        }
-    }   
+    }
 }
