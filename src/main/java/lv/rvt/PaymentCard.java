@@ -19,6 +19,15 @@ public class PaymentCard {
         }
     }
 
+    public void addMoney(double amount) {
+        if (amount > 0) {
+            balance += amount;
+            if (balance > 150) {
+                balance = 150;
+            }
+        }
+    }
+
     public String toString() {
         return "The card has a balance of " + balance + " euros";
     }
