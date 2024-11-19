@@ -5,15 +5,26 @@ public class Person {
     private int age;
     private int weight;
     private int height;
+    private int shelf;
 
+    // All args class constructor
     public Person(String name, int age, int weight, int height) {
         this.age = age;
         this.weight = weight;
         this.height = height;
         this.name = name;
     }
+
+    // Second constructor with only one parameter
+    public Person(String name) {
+        this(name, 0, 0, 0);
+    }
+
+    public Person() {
+
+    }
     
-    public void growOlder() {
+    public void growOlder() {   
         if (this.age < 30) {
             this.age ++;
         }                                                                                                                                   
@@ -27,6 +38,7 @@ public class Person {
         return this.age <= 18;
     }
 
+    // Getter un setter
     public String getName() {
         return this.name;
     }
