@@ -6,11 +6,11 @@ public class Person {
     private int weight;
     private int height;
 
-    public Person(String initialName) {
-        this.age = 0;
-        this.weight = 0;
-        this.height = 0;
-        this.name = initialName;
+    public Person(String name, int age, int weight, int height) {
+        this.age = age;
+        this.weight = weight;
+        this.height = height;
+        this.name = name;
     }
     
     public void growOlder() {
@@ -31,6 +31,7 @@ public class Person {
         return this.name;
     }
 
+    @Override
     public String toString() {
         return this.name + ", age " + this.age + " years";
     }
@@ -51,4 +52,5 @@ public class Person {
         double heigthPerHundred = this.height / 100.0;
         return this.weight / (heigthPerHundred * heigthPerHundred);
     }
+    
 }
