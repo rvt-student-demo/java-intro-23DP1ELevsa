@@ -20,10 +20,6 @@ public class Person {
         this(name, 0, 0, 0);
     }
 
-    public Person() {
-
-    }
-
     public int returnAge() {
         return this.age;
     }
@@ -35,6 +31,10 @@ public class Person {
     // Getter un setter
     public String getName() {
         return this.name;
+    }
+
+    public void setName(String newName) {
+        this.name = newName;
     }
 
     @Override
@@ -66,4 +66,8 @@ public class Person {
     public void growOlder(int years) {
         this.age = this.age + years;
     }
-}
+    
+    public String toCsvRow() {
+        return this.name + ", " + this.age + ", " + this.weight + ", " + this.height;
+    }
+}   
