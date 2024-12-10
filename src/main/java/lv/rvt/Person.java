@@ -15,6 +15,13 @@ public class Person {
         this.name = name;
     }
 
+    public Person(String name, String age, String weight, String height) {
+        this.name = name;
+        this.age = Integer.valueOf(age);
+        this.weight = Integer.valueOf(weight);
+        this.height = Integer.valueOf(height);
+    }
+
     // Second constructor with only one parameter
     public Person(String name) {
         this(name, 0, 0, 0);
@@ -32,6 +39,18 @@ public class Person {
     public String getName() {
         return this.name;
     }
+
+    public int getAge() {
+        return this.age;
+    }
+
+    public int getHeight() {
+        return this.height;
+    }
+
+    public int getWeight() {
+        return this.weight;
+    } 
 
     public void setName(String newName) {
         this.name = newName;

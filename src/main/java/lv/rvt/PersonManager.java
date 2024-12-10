@@ -18,7 +18,7 @@ public class PersonManager {
         while ((line = reader.readLine()) != null) {
             
             String[] parts = line.split(", ");
-            Person person = new Person(parts[0], 0, 0, 0);
+            Person person = new Person(parts[0], parts[1], parts[2], parts[3]);
             persons.add(person);
         }
         return persons;
