@@ -37,7 +37,7 @@ public class Person {
 
     // Getter un setter
     public String getName() {
-        return this.name;
+        return name;
     }
 
     public int getAge() {
@@ -49,7 +49,7 @@ public class Person {
     }
 
     public int getWeight() {
-        return this.weight;
+        return weight;
     } 
 
     public void setName(String newName) {
