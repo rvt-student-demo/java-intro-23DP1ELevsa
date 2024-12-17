@@ -6,6 +6,17 @@ public class Person {
     private int weight;
     private int height;
     private int shelf;
+    private SimpleDate birthday;
+
+    public Person(String name, SimpleDate date) {
+        this.name = name;
+        this.birthday = date;
+    }
+
+    public Person(String name, int day, int month, int year) {
+        this.name = name;
+        this.birthday = new SimpleDate(day, month, year);
+    }
 
     // All args class constructor
     public Person(String name, int age, int weight, int height) {
@@ -58,7 +69,7 @@ public class Person {
 
     @Override
     public String toString() {
-        return this.name + ", age " + this.age + " years";
+        return this.name + ", born on " + this.birthday;
     }
     
     public void printPerson() {
