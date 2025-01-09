@@ -1,16 +1,18 @@
-package lv.rvt;
-import java.nio.file.StandardOpenOption;
-import java.io.BufferedReader;
+package lv.rvt; 
 import java.io.BufferedWriter;
+import java.nio.file.StandardOpenOption;
+import java.io.BufferedReader; 
 import java.util.*;
-
-public class App {
-    public static void main(String[] args) {
-        Apartment manhattanStudioApt = new Apartment(1, 16, 5500);
-        Apartment atlantaTwoBedroomApt = new Apartment(2, 38, 4200);
-        Apartment bangorThreeBedroomApt = new Apartment(3, 78, 2500);
-
-        System.out.println(manhattanStudioApt.largerThan(atlantaTwoBedroomApt));       // false
-        System.out.println(bangorThreeBedroomApt.largerThan(atlantaTwoBedroomApt));  // true
+import javax.sound.midi.Soundbank;
+import lv.rvt.connecticut.Box; 
+ 
+public class App { 
+    public static void main ( String[] args )
+    {
+       Box box = new Box( 2.5, 5.0, 6.0 ) ;
+  
+       System.out.println("Area: " + box.area() + " volume: " + box.volume());
+  
+       System.out.println(box);
     }
 }
