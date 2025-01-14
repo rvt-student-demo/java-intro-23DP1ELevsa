@@ -71,4 +71,12 @@ public class Box {
     public double width() {
         return this.width;
     }
+
+    public Box biggerBox(Box oldBox) {
+        return new Box(1.25 * oldBox.length(), 1.25 * oldBox.width(), 1.25 * oldBox.height());
+    }
+
+    public Box smallerBox(Box oldBox) {
+        return new Box(0.75 * oldBox.length(), 0.75 * oldBox.width(), 0.75 * oldBox.height());
+    }
 }
