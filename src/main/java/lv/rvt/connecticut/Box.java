@@ -15,7 +15,7 @@ public class Box {
     public Box(double side) {
         this.length = side;
         this.width = side;
-        this.height = side;
+        this.height = side; 
     }
     
     public Box(Box oldBox) {
@@ -78,5 +78,9 @@ public class Box {
 
     public Box smallerBox(Box oldBox) {
         return new Box(0.75 * oldBox.length(), 0.75 * oldBox.width(), 0.75 * oldBox.height());
+    }
+
+    public boolean nests(Box outsideBox) {
+        return outsideBox.length() > this.length() && outsideBox.width() > this.width() && outsideBox.height() > this.height();
     }
 }

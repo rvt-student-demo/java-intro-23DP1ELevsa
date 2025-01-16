@@ -7,15 +7,10 @@ import javax.sound.midi.Soundbank;
 import lv.rvt.connecticut.Box; 
  
 public class App { 
-    public static void main( String[] args ) {
-        Box box = new Box(2.5, 5.0, 6.0) ;
-        Box box1 = new Box(box);
-        Box box2 = new Box(box1);
-
-        System.out.println("Area: " + box.area() + " volume: " + box.volume());
-        System.out.println("topArea: " + box.getTopArea());
-        System.out.println(box);
-        System.out.println(box1);
-        System.out.println(box.smallerBox(box2));
+    public static void main(String[] args) {
+        Person ada = new Person("Ada Lovelace", "24 Maddox St. London W1S 2QN");
+        Person esko = new Person("Esko Ukkonen", "Mannerheimintie 15 00100 Helsinki");
+        System.out.println(ada);
+        System.out.println(esko);
     }
 }
