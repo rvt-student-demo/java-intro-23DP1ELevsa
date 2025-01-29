@@ -17,6 +17,11 @@ public class Student extends Person{
     }
 
     @Override
+    public String toString(){
+        return super.getName() + "\n\t" + super.getAddress() + "\n\tStudy credits " + this.credits;
+    }
+
+    @Override
     public boolean equals(Object compared) {
         if (this == compared) {
             return true;

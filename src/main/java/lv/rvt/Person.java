@@ -83,7 +83,7 @@ public class Person {
 
     // Person getter
     public String getName() {
-        return this.name + "'s";
+        return this.name;
     }
     public int getAge() {
         return this.age;
@@ -93,5 +93,8 @@ public class Person {
     }
     public int getWeight() {
         return this.weight;
+    }
+    public String getAddress() {
+        return this.address;
     }
 }
