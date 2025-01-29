@@ -1,20 +1,26 @@
 package lv.rvt;
 
-public class Student {
-        private String name;
-        public Student(String name){
-            this.name = name;
-        }   
+public class Student extends Person{
+    private int credits;
+    private String name;
 
-        public String getName() {
-            return this.name;
-        }
+    public Student(String name, String address){
+        super(name, address);
+    }
 
-        @Override
-        public boolean equals(Object compared) {
-            if (this == compared) {
+    public void study(){
+        this.credits += 1;
+    }
+
+    public int credits(){
+        return this.credits;
+    }
+
+    @Override
+    public boolean equals(Object compared) {
+        if (this == compared) {
             return true;
-        }
+        } 
 
         if (!(compared instanceof Student)) {
             return false;
@@ -27,4 +33,4 @@ public class Student {
         }
         return false;
     }
-}
+}             

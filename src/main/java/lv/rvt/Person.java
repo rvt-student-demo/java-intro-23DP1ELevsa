@@ -31,14 +31,14 @@ public class Person {
         this.birthday = date;
     }
 
-    public Person(String name, String age, String weight, String height){
+    public Person(String name, String age, String weight, String height) {
         this.name = name;
         this.age = Integer.valueOf(age);
         this.weight = Integer.valueOf(weight);
         this.height = Integer.valueOf(height);
     }
 
-    public Person(String name, String address){
+    public Person(String name, String address) {
         this(name, 0, 0, 0, address);
     }
     public void growOlder() {
@@ -51,6 +51,11 @@ public class Person {
  
     public boolean isOfLegalAge() { 
         return this.age <= 18; 
+    } 
+
+    @Override 
+    public String toString() { 
+        return this.name + "\n\t" + this.address;
     } 
      
     public void printPerson() { 
@@ -68,12 +73,10 @@ public class Person {
     public void setName(String newName) {
         this.name = newName;
     }
-    
     public double bodyMassIndex() { 
         double heigthPerHundred = this.height / 100.0; 
         return this.weight / (heigthPerHundred * heigthPerHundred); 
     } 
-
     public String toCsvRow() {
         return this.name + ", " + this.age + ", " + this.weight + ", " + this.height;
     }
@@ -82,21 +85,13 @@ public class Person {
     public String getName() {
         return this.name + "'s";
     }
-
     public int getAge() {
         return this.age;
     }
-
     public int getHeight() {
         return this.height;
     }
-
     public int getWeight() {
         return this.weight;
     }
-
-    @Override 
-    public String toString() { 
-        return this.name + "\n\t" + this.address;
-    } 
 }
