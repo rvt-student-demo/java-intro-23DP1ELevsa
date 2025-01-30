@@ -1,20 +1,22 @@
 package lv.rvt;
 
 public class Person { 
-    private String name; 
+    // Izņemot tās klases child vai sub klasses
+    protected String name; 
     private int age; 
     private int weight; 
-    private int height; 
-    private SimpleDate birthday;
+    private int height;
     private String address;
-    
+    private int salary;
+
     // All args constructor
-    public Person(String name, int age, int weight, int height, String address) { 
+    public Person(String name, int age, int weight, int height, String address, int salary) { 
         this.name = name; 
         this.age = age; 
         this.weight = weight; 
         this.height = height; 
         this.address = address;
+        this.salary = salary;
     } 
     
     // Second constructor with only one parameter
@@ -26,11 +28,6 @@ public class Person {
         this.height = 0;
     }
 
-    public Person(String name, SimpleDate date) {
-        this.name = name;
-        this.birthday = date;
-    }
-
     public Person(String name, String age, String weight, String height) {
         this.name = name;
         this.age = Integer.valueOf(age);
@@ -38,9 +35,15 @@ public class Person {
         this.height = Integer.valueOf(height);
     }
 
+
     public Person(String name, String address) {
-        this(name, 0, 0, 0, address);
+        this(name, 0, 0, 0, address, 0);
     }
+
+    public Person(String name, String address, int salary) {
+        this(name, 0, 0, 0, address, salary);
+    }
+
     public void growOlder() {
         this.age = this.age + 1;
     }
@@ -96,5 +99,8 @@ public class Person {
     }
     public String getAddress() {
         return this.address;
+    }
+    public int getSalary() {
+        return this.salary;
     }
 }
