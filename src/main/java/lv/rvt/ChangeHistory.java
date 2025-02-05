@@ -14,7 +14,8 @@ public class ChangeHistory {
     }
 
     public double maxValue() {
-        double max = this.history.get(0);
+        if (history.isEmpty()) return 0;
+        double max = history.get(0);
         for (Double value : history) {
             if (value > max) {
                 max = value;
@@ -24,23 +25,23 @@ public class ChangeHistory {
     }
 
     public double minValue() {
-        double min = this.history.get(0);
-        for (Double value : history){
-            if (value > min){
+        if (history.isEmpty()) return 0;
+        double min = history.get(0);
+        for (Double value : history) {
+            if (value < min) {
                 min = value;
             }
         }
         return min;
     }
 
-    public double avarage() {
+    public double average() {
+        if (history.isEmpty()) return 0;
         double sum = 0;
-        int sk = 0;
         for (double value : history) {
-            sum = value + sum;
-            sk ++;
+            sum += value;
         }
-        return sum / sk;
+        return sum / history.size();
     }
 
     public void clear() {
